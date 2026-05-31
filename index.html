@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIDMAN - Perkhidmatan Penghubung</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Tetapan Tema Warna Hitam HD -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        utama: '#0A0A0A',    // Hitam pekat
+                        sekunder: '#121212', // Hitam sedikit cerah
+                        aksen: '#D4AF37',    // Emas untuk cantuman nampak mewah & jelas
+                        teks: '#F8F8F8'      // Putih lembut supaya senang baca
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-hd {
+                text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+            }
+            .bayangan-hd {
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.7), 0 0 20px rgba(212, 175, 55, 0.15);
+            }
+            .garis-cerah {
+                border-color: rgba(212, 175, 55, 0.3);
+            }
+        }
+    </style>
+</head>
+<body class="bg-utama text-teks font-sans antialiased">
+
+    <!-- NAVIGASI -->
+    <nav class="fixed w-full top-0 z-50 bg-sekunder/90 backdrop-blur-md border-b garis-cerah">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa fa-handshake-o text-aksen text-3xl"></i>
+                <h1 class="text-[26px] font-bold text-aksen tracking-wider">MIDMAN</h1>
+            </div>
+            <div class="hidden md:flex gap-10 text-[17px] font-medium">
+                <a href="#utama" class="hover:text-aksen transition-colors duration-300">Laman Utama</a>
+                <a href="#servis" class="hover:text-aksen transition-colors duration-300">Perkhidmatan</a>
+                <a href="#tentang" class="hover:text-aksen transition-colors duration-300">Tentang Kami</a>
+                <a href="#hubungi" class="hover:text-aksen transition-colors duration-300">Hubungi</a>
+            </div>
+            <button class="md:hidden text-teks text-xl">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- BAHAGIAN UTAMA -->
+    <section id="utama" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://picsum.photos/id/1073/1920/1080')] opacity-10 bg-cover bg-center"></div>
+        <div class="container mx-auto px-6 py-20 text-center relative z-10">
+            <h2 class="text-[clamp(40px,8vw,72px)] font-bold text-aksen mb-6 text-hd">PENYAMBUNG ANDA YANG TERPERCAYA</h2>
+            <p class="text-[clamp(18px,3vw,24px)] max-w-4xl mx-auto mb-10 text-gray-200 leading-relaxed">
+                Kami menjadi jambatan selamat antara pembeli dan penjual. Urusan lebih mudah, pantas dan terjamin dengan MIDMAN.
+            </p>
+            <a href="#servis" class="inline-block px-10 py-4 bg-aksen text-black font-semibold text-[18px] rounded-lg bayangan-hd hover:bg-[#b8962f] transition-all duration-300 transform hover:scale-105">
+                LIHAT PERKHIDMATAN
+            </a>
+        </div>
+    </section>
+
+    <!-- BAHAGIAN PERKHIDMATAN -->
+    <section id="servis" class="py-24 bg-sekunder">
+        <div class="container mx-auto px-6">
+            <h2 class="text-[clamp(30px,5vw,50px)] font-bold text-center text-aksen mb-16">PERKHIDMATAN KAMI</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- KAD 1 -->
+                <div class="bg-utama p-8 rounded-xl bayangan-hd border border-gray-800 hover:border-aksen/40 transition-all duration-300">
+                    <i class="fa fa-shield text-aksen text-5xl mb-6"></i>
+                    <h3 class="text-[24px] font-semibold mb-4">Urusan Selamat</h3>
+                    <p class="text-gray-300 text-[16px] leading-relaxed">
+                        Kami jaga setiap urusan supaya tiada penipuan. Wang dan barang selamat sampai ke tangan yang betul.
+                    </p>
+                </div>
+
+                <!-- KAD 2 -->
+                <div class="bg-utama p-8 rounded-xl bayangan-hd border border-gray-800 hover:border-aksen/40 transition-all duration-300">
+                    <i class="fa fa-handshake-o text-aksen text-5xl mb-6"></i>
+                    <h3 class="text-[24px] font-semibold mb-4">Perantara Rasmi</h3>
+                    <p class="text-gray-300 text-[16px] leading-relaxed">
+                        Kami bertindak sebagai orang tengah sah yang diiktiraf, memudahkan persetujuan antara dua belah pihak.
+                    </p>
+                </div>
+
+                <!-- KAD 3 -->
+                <div class="bg-utama p-8 rounded-xl bayangan-hd border border-gray-800 hover:border-aksen/40 transition-all duration-300">
+                    <i class="fa fa-clock-o text-aksen text-5xl mb-6"></i>
+                    <h3 class="text-[24px] font-semibold mb-4">Pantas & Cekap</h3>
+                    <p class="text-gray-300 text-[16px] leading-relaxed">
+                        Proses yang ringkas dan cepat. Kami pastikan urusan anda selesai dalam masa yang sesingkat mungkin.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BAHAGIAN TENTANG KAMI -->
+    <section id="tentang" class="py-24">
+        <div class="container mx-auto px-6">
+            <h2 class="text-[clamp(30px,5vw,50px)] font-bold text-center text-aksen mb-16">TENTANG KAMI</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://picsum.photos/id/1/800/600" alt="Tentang Midman" class="w-full h-auto rounded-xl bayangan-hd border-4 border-sekunder">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-[28px] font-semibold mb-6">Kenapa Pilih MIDMAN?</h3>
+                    <p class="text-gray-300 text-[17px] leading-relaxed mb-6">
+                        MIDMAN ditubuhkan untuk menyelesaikan masalah ketidakpercayaan dalam urusan jual beli atau kerjasama perniagaan. Kami berpegang teguh kepada prinsip kejujuran, amanah dan profesionalisme.
+                    </p>
+                    <p class="text-gray-300 text-[17px] leading-relaxed mb-8">
+                        Pasukan kami berpengalaman luas dalam menguruskan pelbagai jenis transaksi, memastikan setiap langkah selamat dan memuaskan hati semua pihak.
+                    </p>
+                    <ul class="space-y-3 text-gray-200">
+                        <li class="flex items-center gap-3"><i class="fa fa-check-circle text-aksen text-xl"></i> Lebih 10 tahun pengalaman</li>
+                        <li class="flex items-center gap-3"><i class="fa fa-check-circle text-aksen text-xl"></i> Ribuan pelanggan berpuas hati</li>
+                        <li class="flex items-center gap-3"><i class="fa fa-check-circle text-aksen text-xl"></i> Sistem keselamatan tahap tinggi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BAHAGIAN HUBUNGI -->
+    <section id="hubungi" class="py-24 bg-sekunder">
+        <div class="container mx-auto px-6">
+            <h2 class="text-[clamp(30px,5vw,50px)] font-bold text-center text-aksen mb-16">HUBUNGI KAMI</h2>
+            <div class="max-w-4xl mx-auto bg-utama p-10 rounded-xl bayangan-hd border border-gray-800">
+                <div class="grid md:grid-cols-2 gap-10">
+                    <div>
+                        <h3 class="text-[24px] font-semibold mb-6">Maklumat Hubungan</h3>
+                        <div class="space-y-5 text-gray-300">
+                            <div class="flex items-center gap-4">
+                                <i class="fa fa-map-marker text-aksen text-xl w-6 text-center"></i>
+                                <span>Kuala Lumpur, Malaysia</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <i class="fa fa-phone text-aksen text-xl w-6 text-center"></i>
+                                <span>+60 12-345 6789</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <i class="fa fa-envelope text-aksen text-xl w-6 text-center"></i>
+                                <span>hubungi@midman.com</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-5 mt-8 text-2xl">
+                            <a href="#" class="text-gray-400 hover:text-aksen transition-colors"><i class="fa fa-facebook-square"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-aksen transition-colors"><i class="fa fa-whatsapp"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-aksen transition-colors"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Nama Penuh" class="w-full p-4 bg-sekunder border border-gray-700 rounded-lg focus:outline-none focus:border-aksen text-teks">
+                        <input type="email" placeholder="Alamat Emel" class="w-full p-4 bg-sekunder border border-gray-700 rounded-lg focus:outline-none focus:border-aksen text-teks">
+                        <textarea rows="4" placeholder="Mesej / Pertanyaan" class="w-full p-4 bg-sekunder border border-gray-700 rounded-lg focus:outline-none focus:border-aksen text-teks"></textarea>
+                        <button type="submit" class="w-full p-4 bg-aksen text-black font-semibold rounded-lg hover:bg-[#b8962f] transition-colors">
+                            HANTAR MESEJ
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KAKI LAMAN -->
+    <footer class="bg-utama border-t garis-cerah py-8 text-center text-gray-400 text-[15px]">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2026 MIDMAN. Semua Hak Terpelihara.</p>
+        </div>
+    </footer>
+
+</body>
+                      </html>
+                                                                                                   
